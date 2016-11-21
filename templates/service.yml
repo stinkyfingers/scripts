@@ -1,0 +1,14 @@
+kind: "Service"
+apiVersion: "v1"
+metadata: 
+  name: "api"
+  labels: 
+    name: "api"
+spec: 
+  type: "LoadBalancer"
+  ports: 
+    - protocol: "TCP"
+      port: 80
+      targetPort: 7000
+  selector: 
+    app: "api"
